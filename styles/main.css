@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #0F0;
+  --secondary-color: #3D3D3D;
+  --accent1-color: #243010;
+  --accent2-color: #2A3C24;
+  --accent3-color: #C1BDB3;
+  --background-color: #000;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Fira Mono", monospace;
+  --paragraph-font: "Fira Sans", Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  /* headlines on a white background */
+  --headline-color-on-white: var(--primary-color);
+  /* headlines on a colored background */
+  --headline-color-on-color: var(--primary-color);
+  /* paragraph text on a white background */
+  --paragraph-color-on-white: var(--primary-color);
+  /* paragraph text on a colored background */
+  --paragraph-color-on-color: var(--primary-color);
+  --paragraph-background-color: var(--secondary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+
+h1,
+h2,
+h2 a,
+h3,
+::marker {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  text-shadow: 0 0 2px var(--headline-color-on-white);
+}
+
+p,
+a,
+li {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  text-shadow: 0 0 6px var(--headline-color-on-white);
+}
+
+/* Makes things with this class blink */
+.blinky {
+  animation: blinky 1.2s step-start infinite;
+  color: var(--primary-color);
+}
+
+@keyframes blinky {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Mono font for "shell command" decorative text */
+.command {
+  font-family: var(--heading-font);
+  font-size: 0.8em;
+}
+
+#bh-bg {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Custom scrollbar on most modern browsers */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--secondary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #080;
+}
+
+/* Change bullet for current page in nav to Black Right-Pointing Small Triangle (▸) */
+.you-are-here {
+  list-style-type: "\25B8  ";
+}
+
+/* Styles for said bullet */
+.you-are-here::marker {
+  font-size: larger;
+}
+
+main li {
+  margin-bottom: 5px;
+}
+
+/* List sublevel 1 - gives cleaner HTML than nested lists */
+.sub1 {
+  list-style-type: square;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.no-space-after {
+  margin-bottom: 5px;
+}
+
+.vert-only {
+  display: none;
+}
+
+.yt-embed {
+  border: none;
+  aspect-ratio: 16/9;
+  width: 70%;
+}
+
+body {
+  background-color: var(--background-color);
+  /* Force body to only be as tall as the window */
+  height: 100vh;
+  max-width: 1650px;
+  margin: 0 auto;
+  /* It Just Works™ */
+  display: flex;
+  gap: 10px;
+}
+
+header,
+#hi-box {
+  background-color: var(--secondary-color);
+}
+
+header {
+  /* Center vertically */
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#header-imgs {
+  /* It Just Works™... with enough fiddling */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  max-height: 200px;
+}
+
+#header-imgs img {
+  width: 100%;
+}
+
+header h1,
+header h3 {
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin: 10px auto;
+}
+
+header nav {
+  margin: 0 10%;
+}
+
+.social-icons {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.social-icons a {
+  text-shadow: 0 0 2px var(--headline-color-on-white);
+  text-decoration: none;
+}
+
+/* PAGE CONTENT */
+
+#side-content {
+  width: 960px;
+  /* Cap height at the height of the browser window... */
+  max-height: 100vh;
+  /* ...but keep it scrollable if there's more content */
+  overflow-y: auto;
+  /* Center vertically in body */
+  margin: auto;
+}
+
+#hi-box {
+  text-align: center;
+  margin: 30px auto;
+  padding: 5px 20px 20px;
+  width: 70%;
+}
+
+#side-content h1,
+.centered {
+  text-align: center;
+}
+
+a {
+  transition: all .2s;
+  font-family: inherit;
+}
+
+a:hover {
+  color: white;
+  text-shadow: 0 0 6px white;
+}
+
+/* Mainly for Bad Apple wiring diagram. Prevents imgs from overflowing */
+img {
+  max-width: 100%;
+}
+
+.block-img,
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+.flex-imgs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  margin: 30px auto;
+}
+
+/* This is an <a>, why do I have to set these manually? */
+#toggle-bg {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsiveness */
+/* (Too narrow to display side-by-side) */
+@media screen and (max-width: 1135px) {
+  body {
+    height: fit-content;
+    display: block;
+  }
+
+  header {
+    height: fit-content;
+    width: 70%;
+    margin-top: 10px;
+  }
+
+  #side-content {
+    max-height: fit-content;
+    width: 95%;
+    overflow-y: auto;
+    margin: 0 auto;
+  }
+
+  #hi-box {
+    width: 50%;
+  }
+
+  .sbs-only {
+    display: none;
+  }
+
+  .vert-only {
+    display: list-item;
+  }
+}
+
+/* Extra narrow (phone) */
+@media screen and (max-width: 720px) {
+  .yt-embed {
+    width: 100%;
+  }
+
+  header {
+    width: 95%;
+  }
+
+  #hi-box {
+    width: 90%;
+  }
+}
