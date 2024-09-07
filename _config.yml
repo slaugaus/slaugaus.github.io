@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Alan please add title
+title: Austin Slaughter
 subtitle: ''
-description: ''
+description: Allan please add description
 keywords:
 author: Austin Slaughter
 language: en
@@ -60,7 +60,7 @@ prismjs:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: posts
   per_page: 10
   order_by: -date
 
@@ -97,6 +97,10 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: landscape
+
+marked:
+  prependRoot: true
+  postAsset: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
