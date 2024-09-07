@@ -1,3 +1,5 @@
+"use strict";
+
 let stars = [];
 
 const canvas = document.querySelector("#bh-bg");
