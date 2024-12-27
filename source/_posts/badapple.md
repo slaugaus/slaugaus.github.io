@@ -7,16 +7,16 @@ tags:
 - C
 - Python
 ---
-<p class="command">[visitor@portfolio badapple]$ mpv demo.mp4</p>
+`[visitor@portfolio badapple]$ mpv demo.mp4`
 
 <!-- div.video-container -->
 {% youtube bgwLhES1YYo %}
 
-<p class="command">[visitor@portfolio badapple]$ cat badapple.md</p>
+`[visitor@portfolio badapple]$ cat badapple.md`
 
 <p class="centered"><a href="https://github.com/slaugaus/bad-msp432" target="_blank">View on GitHub</a></p>
 
-[Bad Apple!!](https://archive.org/details/bad_apple_is.7z) ported to the [Texas Instruments LaunchPad MSP432P401R](https://docs.rs-online.com/3934/A700000006811369.pdf), a [black and white LCD](https://www.sparkfun.com/products/10168) (notable for being the same part found in the Nokia 3310 cell phone), and a [DFPlayer Mini](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299) clone.
+[Bad Apple!!](https://archive.org/details/bad_apple_is.7z) ported to the [Texas Instruments LaunchPad MSP432P401R](https://docs.rs-online.com/3934/A700000006811369.pdf), a [black & white LCD](https://www.sparkfun.com/products/10168) (notable for being the same part found in the Nokia 3310 cell phone), and a [DFPlayer Mini](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299) clone.
 
 This was my final project for ECEN 260 (Microprocessor-Based System Design) at BYU-Idaho. The lab kit had a 2-color LCD in it, and I almost immediately had the urge to play Bad Apple on it using the dev board the class was based around. This covers "Digital I/O," "Display," and "Timers" from the list of 7 concepts we needed to pick from. My professor was "quite impressed," saying it "exceeded expectations, and actually pressed the boundaries of the processor. Good work!"
 
@@ -30,4 +30,4 @@ Here's a wiring diagram if you happen to own the hardware and want to try it at 
 
 {% asset_img ba-circuit.png Wiring diagram of the circuit %}
 
-<p class="command">[visitor@portfolio badapple]$ <span class="blinky">█</span></p>
+`[visitor@portfolio badapple]$ `<span class="blinky">`█`</span>

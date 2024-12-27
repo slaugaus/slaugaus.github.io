@@ -1,22 +1,20 @@
 ---
 title: Bullet Heck!
 date: 2018-05-04
+uses_canvas: true
 tags:
   - Pygame
   - Games
   - Python
 ---
-
-<!-- TODO: A canvas#bh-bg is needed, likely in the theme. And what about the script?  -->
-
-<p class="command">[visitor@portfolio bulletheck]$ ./cool-background &amp; <br>
-    [1] 573 <br>
-    Running cool background. <a id="toggle-bg">Click here to turn it off.</a><br>
-    [visitor@portfolio bulletheck]$ mpv demo.mp4</p>
+`[visitor@portfolio bulletheck]$ ./cool-background &`
+`[1] 573`
+`Running cool background. `<a id="toggle-bg">`Click here to turn it off.`</a>
+`[visitor@portfolio bulletheck]$ mpv demo.mp4`
 
 {% youtube _FGTeRFonkE %}
 
-<p class="command">[visitor@portfolio bulletheck]$ cat bulletheck.md</p>
+`[visitor@portfolio bulletheck]$ cat bulletheck.md`
 
 <p class="centered"><a href="https://github.com/slaugaus/bullet-heck" target="_blank">View on GitHub</a> |
     <a href="https://github.com/slaugaus/bullet-heck/releases" target="_blank">Download</a>
@@ -26,7 +24,7 @@ Even though I made it in high school, this is still one of my biggest/most ambit
 
 ![Player ship](bh-ship.gif)
 
-The game itself is a 2D horizontal space shooter called “Bullet Heck!” with abstract “fake 3D” player and enemy graphics (made in Blender and rendered to .png sequences). There are 6 types of enemy that show up over time, 4 levels of weapon upgrades for your ship, and an endless score-attack gameplay loop with scaling difficulty. Thanks to the "pickle" library, your high score is saved between sessions.
+The game itself is a 2D horizontal space shooter called “Bullet Heck!” with abstract “fake 3D” player and enemy graphics (made in Blender and rendered to .png sequences). There are 6 types of enemy that show up over time, 4 levels of weapon upgrades for your ship, and an endless score-attack gameplay loop with scaling difficulty. Thanks to the `pickle` library, your high score is saved between sessions.
 
 <!-- TODO: Theme needs a custom tag for aligning images. Probably also use them for .command, .centered, etc. -->
 ![Health pickup](bh-heal.gif) ![Powerup pickup](bh-power.gif)
@@ -59,4 +57,6 @@ Using the tkinter library, I also wrote a launcher program for editing settings 
 * Font is "Uno Estado" by Dan Zadorozny (Iconian Fonts)
 * Music is "Space Fighter Loop" by Kevin MacLeod (incompetech.com), licensed under CC BY 3.0
 
-<p class="command">[visitor@portfolio bulletheck]$ <span class="blinky">█</span></p>
+`[visitor@portfolio bulletheck]$ `<span class="blinky">`█`</span>
+
+<script src="/js/bh-bg.js">
