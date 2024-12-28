@@ -1,19 +1,18 @@
 ---
 tab_title: About Me
 ---
-<!-- TODO: probs do this thing theme-side -->
-<div id="hi-box" class="ascii-box em-box">
-    <h1>Hi!</h1>
-    <p>I'm Austin, a Computer Science student at Brigham Young University-Idaho. Between my self-taught
-        computer knowledge and what I've learned in college, I have quite a bit of experience under my belt:
-    </p>
-</div>
+{% hi_box %}
 
-`[visitor@portfolio ~]$ cat index.md`
+# Hi!
+
+I'm Austin, a Computer Science student at Brigham Young University-Idaho. Between my self-taught computer knowledge and what I've learned in college, I have quite a bit of experience under my belt:
+{% endhi_box %}
+
+{% cli_prompt ~ cat index.md %}
 
 ## Skills & Proficiencies
 
-**Programming Languages**
+#### Programming Languages
 
 * Proficient: C, C# (.NET, ASP.NET, Entity Framework, LINQ), JavaScript, TypeScript, Python, Erlang
 * Familiar: Assembly (ARM, x86_64), Bash scripts, C++, Clojure, Go, Java, Lua, Rust, SQL (Microsoft SQL Server)
@@ -26,10 +25,10 @@ tab_title: About Me
 
 ## Programming Projects
 
-* [Visual JSON Editor](https://marketplace.visualstudio.com/items?itemName=slaugaus.visual-json): VS Code extension providing a custom GUI (webview) for editing & visualizing JSON files
+* [Visual JSON Editor](jsonedit): VS Code extension providing a custom GUI (webview) for editing & visualizing JSON files
   * TypeScript frontend and backend
   * College senior project
-* [matrixOS](https://github.com/slaugaus/matrixOS): CLI for displaying images & animated GIFs on RGB LED matrix panels
+* [matrixOS](matrixos): CLI for displaying images & animated GIFs on RGB LED matrix panels
   * Powered by a Teensy 4.0 with C code and the SmartMatrix library
   * Final group project for *Embedded Systems* class
 * [Bad MSP432!!](badapple): [Bad Apple!!](https://www.youtube.com/watch?v=UkgK8eUdpAo) compressed to under 256K and playing on a Texas Instruments ARM dev board
@@ -78,4 +77,4 @@ tab_title: About Me
 * Digitized photos for the [Latah County Historical Society](https://www.latahcountyhistoricalsociety.org/)
 * Assisted with social media, events, Wix website, PC management for [Family Promise of the Palouse](https://www.familypromisepalouse.org/)
 
-`[visitor@portfolio ~]$ `<span class="blinky">`█`</span>
+{% cli_prompt ~ blinky %}

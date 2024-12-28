@@ -1,20 +1,20 @@
 ---
 title: Bad Apple!! on TI MSP432
+excerpt: Bad Apple on a low-spec microcontroller.
 date: 2022-12-13
 tags:
 - Embedded Systems
 - Audiovisual
-- C
+- C/C++
 - Python
 ---
-`[visitor@portfolio badapple]$ mpv demo.mp4`
-
-<!-- div.video-container -->
+{% cli_prompt badapple mpv demo.mp4 %}
 {% youtube bgwLhES1YYo %}
+{% cli_prompt badapple cat badapple.md %}
 
-`[visitor@portfolio badapple]$ cat badapple.md`
-
-<p class="centered"><a href="https://github.com/slaugaus/bad-msp432" target="_blank">View on GitHub</a></p>
+{% links %}
+[View on GitHub](https://github.com/slaugaus/bad-msp432)
+{% endlinks %}
 
 [Bad Apple!!](https://archive.org/details/bad_apple_is.7z) ported to the [Texas Instruments LaunchPad MSP432P401R](https://docs.rs-online.com/3934/A700000006811369.pdf), a [black & white LCD](https://www.sparkfun.com/products/10168) (notable for being the same part found in the Nokia 3310 cell phone), and a [DFPlayer Mini](https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299) clone.
 
@@ -28,6 +28,8 @@ All the files needed to run it are in the GitHub repo linked above. The C code c
 
 Here's a wiring diagram if you happen to own the hardware and want to try it at home. The DFPlayer is (or should be) optional.
 
+{% flexpics %}
 {% asset_img ba-circuit.png Wiring diagram of the circuit %}
+{% endflexpics %}
 
-`[visitor@portfolio badapple]$ `<span class="blinky">`█`</span>
+{% cli_prompt badapple blinky %}

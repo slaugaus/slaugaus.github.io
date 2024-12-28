@@ -24,7 +24,7 @@ pretty_urls:
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: archives
+archive_dir: projects
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
@@ -96,11 +96,20 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: slaug-cli
 
 marked:
   prependRoot: true
   postAsset: true
+
+clean_css:
+  exclude: 
+    - '*.min.css'
+
+uglify:
+  exclude:
+    - "*.min.js"
+  mangle: false
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
