@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Mono&family=Fira+Sans&display=swap');
+@import "_ascii-box";
+@import "_better-sr-only";
+@import "_vars";
+
+h1,
+h2,
+h2 a,
+h3,
+::marker {
+    font-family: @heading-font;
+    color: @headline-color-on-white;
+    text-shadow: 0 0 2px @headline-color-on-white;
+}
+
+a,
+body {
+    font-family: @paragraph-font;
+    color: @paragraph-color-on-white;
+    text-shadow: 0 0 6px @headline-color-on-white;
+}
+
+code,
+pre {
+    font-family: @code-font;
+    font-size: 0.8em;
+    color: @paragraph-color-on-white;
+    text-shadow: 0 0 6px @headline-color-on-white;
+
+    a {
+        font-family: inherit;
+    }
+}
+
+/* Makes things with this class blink */
+.blinky {
+    animation: blinky 1.2s step-start infinite;
+    color: @primary-color;
+}
+
+@keyframes blinky {
+    50% {
+        opacity: 0;
+    }
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Custom scrollbar on most modern browsers */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: @background-color;
+}
+
+::-webkit-scrollbar-corner {
+    background: @secondary-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: @primary-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #080;
+}
+
+/* Change bullet for current page in nav to Black Right-Pointing Small Triangle (▸) */
+.you-are-here {
+    list-style-type: "\25B8  ";
+}
+
+/* Styles for said bullet */
+.you-are-here::marker {
+    font-size: larger;
+}
+
+main li {
+    margin-bottom: 5px;
+}
+
+/* List sublevel 1 */
+ul ul {
+    list-style-type: square;
+    margin-bottom: 10px;
+}
+
+.no-space-after {
+    margin-bottom: 5px;
+}
+
+.video-container>iframe {
+    border: none;
+    aspect-ratio: 16/9;
+    width: 70%;
+}
+
+body {
+    background-color: @background-color;
+    /* Force body to only be as tall as the window */
+    height: 100vh;
+    max-width: 1650px;
+    margin: 0 auto;
+    /* It Just Works™ */
+    display: flex;
+    gap: 10px;
+}
+
+#header {
+    /* Center vertically */
+    margin: auto;
+    width: 600px;
+    box-sizing: border-box;
+    padding: 20px;
+
+    h1 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    h4 {
+        margin: 5px 0;
+    }
+
+    ul ul {
+        margin-top: -15px;
+    }
+
+    nav {
+        margin: 0 10%;
+    }
+}
+
+#header-imgs {
+    /* It Just Works™... with enough fiddling */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    max-height: 200px;
+}
+
+.subtitle {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.social-icons {
+    text-align: center;
+    font-size: 30px;
+    margin: 0 auto;
+
+    a {
+        text-shadow: 0 0 2px @headline-color-on-white;
+        text-decoration: none;
+    }
+}
+
+/* PAGE CONTENT */
+
+#side-content {
+    width: 960px;
+    /* Cap height at the height of the browser window... */
+    max-height: 100vh;
+    /* ...but keep it scrollable if there's more content */
+    overflow-y: auto;
+    /* Center vertically in body */
+    margin: auto;
+}
+
+#hi-box {
+    text-align: center;
+    width: 70%;
+    margin: 30px auto;
+    padding: 5px 20px 20px;
+}
+
+.ascii-box {
+    background-color: @secondary-color;
+}
+
+.archive-article-inner {
+    margin: 10px;
+    padding: 1em;
+}
+
+.centered {
+    text-align: center;
+}
+
+a,
+a time,
+a code {
+    transition: all .2s;
+
+    &:hover {
+        color: white;
+        text-shadow: 0 0 6px white;
+    }
+}
+
+/* Mainly for Bad Apple wiring diagram. Prevents imgs from overflowing */
+img {
+    max-width: 100%;
+}
+
+.block-img,
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.flex-pics {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    margin: 30px auto;
+}
+
+/* This is an <a>, why do I have to set these manually? */
+#toggle-bg {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Code blocks */
+figure.highlight.plaintext {
+    margin: 0 1ch;
+
+    table {
+        .ascii-box;
+        background-color: @secondary-color;
+        padding: 0 1ch;
+    }
+}
+
+/* Article tag list */
+.article-tag-block {
+    margin-top: -20px;
+    margin-bottom: 0;
+}
+
+.article-tag-list {
+    display: inline;
+    padding: 0;
+}
+
+.article-tag-list-item {
+    display: inline;
+    margin-right: 1ch;
+}
+
+/* #region Responsiveness */
+/* (Too narrow to display side-by-side) */
+@media screen and (max-width: 1135px) {
+    body {
+        height: fit-content;
+        display: block;
+    }
+
+    #header {
+        height: fit-content;
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    #side-content {
+        max-height: fit-content;
+        width: 95%;
+        overflow-y: auto;
+        margin: 0 auto;
+    }
+
+    #hi-box {
+        width: 50%;
+    }
+}
+
+/* Extra narrow (phone) */
+@media screen and (max-width: 720px) {
+    .video-container>iframe {
+        width: 100%;
+    }
+
+    #header {
+        width: 95%;
+    }
+
+    #hi-box {
+        width: 90%;
+    }
+}
+
+/* #endregion */

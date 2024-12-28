@@ -1,0 +1,27 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%
+    var title = page.tab_title ?? page.title;
+
+    if (is_archive()){
+        title = "Projects";
+
+        if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()){
+        title += ': ' + page.year;
+        }
+    } else if (is_category()){
+        title = 'Category: ' + page.category;
+    } else if (is_tag()){
+        title = 'Tag: ' + page.tag;
+    }
+    %>
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+    <%- css('/less/style') %>
+    <%# Font Awesome %>
+    <%- css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css') %>
+</head>

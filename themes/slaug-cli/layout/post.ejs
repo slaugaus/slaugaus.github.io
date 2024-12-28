@@ -1,0 +1,13 @@
+<h1 class="centered"><%- page.title %></h1>
+
+<% if (is_post()) { %>
+<pre class="centered article-tag-block">
+<i class="fa-solid fa-tag"></i> <%- list_tags(page.tags, {
+    show_count: false,
+    class: 'article-tag'
+}) %>
+<i class="fa-solid fa-calendar-days"></i> <time datetime="<%= date_xml(page.date) %>" class="dt-published"><%= date(page.date) %></time>
+</pre>
+<% } %>
+
+<%- page.content %>

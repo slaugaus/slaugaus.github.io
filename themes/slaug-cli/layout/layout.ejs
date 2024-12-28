@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- partial('_partial/head') %>
+
+<body>
+    <% if (page.uses_canvas) { %>
+    <canvas id="bg-canvas"></canvas>
+    <% } %>
+    <%- partial('_partial/header') %>
+    <div id="side-content">
+        <main>
+            <%- body %>
+        </main>
+        <footer>
+            <p>&copy; <span id="copyYear">2023 (please enable JS :^) )</span> Austin Slaughter<br>
+            Powered by <a href="https://hexo.io" target="_blank">Hexo</a></p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelector("#copyYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

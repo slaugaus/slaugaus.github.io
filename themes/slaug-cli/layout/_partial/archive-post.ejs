@@ -1,0 +1,10 @@
+<article class="archive-article archive-type-<%= post.layout %>">
+  <div class="archive-article-inner ascii-box">
+    <header class="archive-article-header">
+      <i class="fa-solid fa-calendar-days"></i> <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'MMM D'}) %>
+      <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+      <p><%= post.excerpt %></p>
+      <i class="fa-solid fa-tag"></i> <code><%- partial('post/tag') %></code>
+    </header>
+  </div>
+</article>

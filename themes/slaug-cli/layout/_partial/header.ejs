@@ -1,0 +1,39 @@
+<header id="header" class="ascii-box">
+    <div id="header-imgs">
+        <img src="/img/profile.jpg" alt="Real picture of me">
+        <img src="/img/favicon.png" alt="My profile picture elsewhere">
+    </div>
+    <h1>$ Austin Slaughter <span class="blinky">█</span></h1>
+    <h3 class="subtitle">Computer Science student</h3>
+    <div class="social-icons">
+        <a href="mailto:a@slaug.cc?subject=Website%20Inquiry" target="_blank"><i aria-hidden="true"
+                class="fa-solid fa-envelope" title="Email me"></i><span class="sr-only">Email me</span></a>
+        <a href="https://github.com/slaugaus" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"
+                title="GitHub Profile"></i><span class="sr-only">GitHub Profile</span></a>
+        <a href="https://www.linkedin.com/in/arslaug/" target="_blank"><i aria-hidden="true" title="LinkedIn Profile"
+                class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn
+                Profile</span></a>
+        <a href="https://youtube.com/@slaugaus" target="_blank"><i class="fa-brands fa-youtube" aria-hidden="true"
+                title="YouTube Channel"></i><span class="sr-only">YouTube Channel</span></a>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <h2><a href="/">About Me</a></h2>
+            </li>
+            <li>
+                <h2><a href="/projects">Projects</a></h2>
+                <ul>
+                    <% site.posts.sort('date', -1).limit(2).each((post => { %>
+                        <li>
+                            <h4><a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a></h4>
+                        </li>
+                    <% })) %>
+                    <li>
+                        <h4><a href="/projects">More...</a></h4>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
